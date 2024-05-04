@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="HandheldFriendly" content="true">
+    <base >
+    <title>优享云 - Index</title>
+    <link href="assets/bootcss/minireset.css/0.0.2/minireset.min.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+	<link rel="icon" href="https://www.ahfi.cn/favicon.ico">
+    <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!-- Loading hover -->
+    <div class="loading">
+        <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+    </div>
+
+    <!-- Main box -->
+    <main>
+        <div class="content">
+            <div class="left">
+                <div class="avatar">
+                    <img src="https://q1.qlogo.cn/g?b=qq&nk=1330903352&s=100">
+                </div>
+                <ul class="menu">
+                    <li>
+                        <a goto="#home">主页</a>
+                    </li>
+                    <li>
+                        <a goto="#archives">文章</a>
+                    </li>
+                    <li>
+                        <a goto="#contact">联系</a>
+                    </li>
+                    <li>
+                        <a goto="#donate">赞助</a>
+                    </li>
+                </ul>
+                <div class="copyright">
+                    Ah Hui
+                    <i class="fa fa-heart"></i> by
+                    <br>
+                    <a href="./" target="_blank">Home</a>
+                </div>
+            </div>
+            <div class="right">
+
+                <section id="home" class="active">
+                    <h1>My Home</h1>
+                    <p>
+						欢迎来到优享云主页（home.ahfi.cn）- 技术分享与创意指南，我们致力于分享技术教程、建站教程、实用技巧，涵盖多个领域包括编程语言、苹果技术、快捷指令等。浏览我们的苹果归档，探索苹果教程和苹果软件。与此同时，我们提供丰富的源码分享，包括建站源码，以及电脑和手机软件仓库。探索创新、学习新技能，优享云陪伴您成长
+                    </p>
+                </section>
+
+                <section id="archives">
+                    <h1>近期文章</h1>
+					<ul id="post-list"></ul>
+                </section>
+
+                <section id="contact">
+                    <h1>联系方式</h1>
+                    <div class="items">
+                        <a href="https://www.ahfi.cn" target="_blank">
+                            <i class="fa fa-home"></i>
+                            <span>博客</span>
+                        </a>
+                        <a href="http://wpa.qq.com/msgrd?v=3&uin=00000&site=qq&menu=yes" target="_blank">
+                            <i class="fa fa-qq"></i>
+                            <span>暂无</span>
+                        </a>
+						<a href="mailto:ahfi@qq.com" target="_blank">
+                            <i class="fa fa-envelope"></i>
+                            <span>E-Mail</span>
+                        </a><!--
+                        <a href="#" target="_blank">
+                            <i class="fa fa-twitter"></i>
+                            <span>Twitter</span>
+                        </a>
+                        <a href="#" target="_blank">
+                            <i class="fa fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+						<a href="#" target="_blank">
+                            <i class="fa fa-weixin"></i>
+                            <span>GitHub</span>
+                        </a>-->
+                    </div>
+                </section>
+                <section id="donate">
+                    <h1>赞助</h1>
+                    <div class="donate-img-box">
+                        <img src="assets/img/AliPay.jpg">
+                    </div>
+                    <p>
+                        
+                        <br>非常感谢您的支持...
+                    </p>
+                </section>
+            </div>
+        </div>
+
+        <footer>
+            <p>Copyright © 2024 ICP证：<a href="http://www.beian.miit.gov.cn/" target="_blank">桂ICP备19010399号</a></p>
+        </footer>
+    </main>
+
+    <!-- Some scripts -->
+    <script src="assets/bootcss/jquery/3.3.1/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.ajax({
+                url: 'https://www.ahfi.cn/wp-json/wp/v2/posts?per_page=8',
+                method: 'GET',
+                success: function(data){
+                    var postList = $('#post-list');
+                    $.each(data, function(index, post){
+                        var listItem = $('<li><a href="' + post.link + '" target="_blank">' + post.title.rendered + ' ---- ' + post.date.substring(0, 10) + '</a></li>');
+                        postList.append(listItem);
+                    });
+                },
+                error: function(err){
+                    console.log(err);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
