@@ -8,7 +8,9 @@
     <meta name="keywords" content="优享云">
     <link rel="icon" href="https://www.ahfi.cn/favicon.ico">
     <link href="cdn/expire-1-M/bootstrap/5.1.3/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/menu.css">
     <link rel="stylesheet" href="//at.alicdn.com/t/c/font_4532946_t8z6bxdn7ba.css">
     <style>
         .button {
@@ -78,7 +80,7 @@
         <div class="col-lg-4 photo-bg"></div>
         <div class="col-lg-8 card">
             <h2>
-                <a href="/" title="返回首页">
+                <a title="返回首页">
                     <img class="card-logo" src="img/hi.svg">
                 </a> Hi，欢迎访问 🤝 [ 优享云 ]
             </h2>
@@ -90,7 +92,7 @@
                     <small>近期文章</small>
                 </h4>
                 <ul class="recent-articles">
-                    <!-- Here will be populated by JavaScript -->
+                    <!-- 近期文章 -->
                 </ul>
                 <footer class="footer">
                     <table style="width:100%;" cellpadding="2" cellspacing="0" border="0" bordercolor="#000000">
@@ -128,7 +130,7 @@
                                     </li>
                                     <li>
                                         <a href="https://api.ahfi.cn/" target="_blank" title="API接口 - 稳定、快速、免费的 API 接口服务" class="">
-                                            <i class="iconfont icon-luyouqijiekou" style="font-size: 23px; font-weight:500"></i>
+                                            <i class="iconfont icon-luyouqijiekou" style="font-size: 25px; font-weight:400"></i>
                                         </a>
                                     </li>
                                     <li>
@@ -181,6 +183,17 @@
         </div>
     </div>
 </div>
+
+<div class="context-menu" id="context-menu">
+    <div class="context-menu-item" id="menu-home"><i class="fas fa-home"></i> 首页</div>
+    <div class="context-menu-item" id="menu-refresh"><i class="fas fa-sync-alt"></i> 刷新</div>
+    <div class="context-menu-item" id="menu-search"><i class="fas fa-search"></i> 搜索</div>
+    <hr>
+    <div class="context-menu-item" id="menu-blog"><i class="fas fa-blog"></i> 博客</div>
+    <div class="context-menu-item" id="menu-api"><i class="fas fa-code"></i> API</div>
+    <div class="context-menu-item" id="menu-bookmark"><i class="fas fa-bookmark"></i> 书签</div>
+  </div>
+
 <script src="cdn/expire-1-M/jquery/3.2.1/jquery.min.js" type="application/javascript"></script>
 <script src="cdn/expire-1-M/bootstrap/5.1.3/js/bootstrap.min.js" type="application/javascript"></script>
 <script src="cdn/expire-1-M/layer/3.5.1/layer.min.js" type="application/javascript"></script>

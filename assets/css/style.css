@@ -7,6 +7,8 @@ body {
     height: 100vh;
     min-height: 800px;
     /*background-color: azure;*/
+    background-image: url('https://image-cdn.cfb.asia/2023/1201/2594c400ed999e126ea9ab599190a441.svg');
+    background-size: 100% 100%; /* 设置背景图片填充整个容器 */
 }
 
  *{  
@@ -241,6 +243,8 @@ text-decoration:none;
     background-size: cover;
     border-radius: 20px 0 0 20px;
 }
+
+
 
 footer p {
     font-size: 12px;

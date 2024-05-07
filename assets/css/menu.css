@@ -1,0 +1,35 @@
+.context-menu {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
+    padding: 5px 0;
+    min-width: 120px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+  }
+  .context-menu-item {
+    padding: 5px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .context-menu-item i {
+    margin-right: 3px;
+    font-size: 12px;
+  }
+  .context-menu-item:hover {
+    background-color: #3498db;
+    color: #fff;
+  }
+
+  /* 修复搜索按钮样式 */
+.search-btn {
+    border-radius: 0;
+}
+.btn-primary {
+    border-radius: 16px;
+}
